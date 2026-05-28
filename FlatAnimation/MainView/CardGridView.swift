@@ -21,7 +21,10 @@ struct CardGridView: View {
         AnimationItem(title: "Particle F", view: AnyView(ParticleFView())),
         AnimationItem(title: "Orb", view: AnyView(OrbAnimationView())),
         AnimationItem(title: "LavaLamp", view: AnyView(LavaLampView())),
-        AnimationItem(title: "Aquarium", view: AnyView(AquariumView()))
+        AnimationItem(title: "NeonWaves", view: AnyView(NeonWavesView())),
+        AnimationItem(title: "PlasmaGlobe", view: AnyView(PlasmaGlobeView())),
+        AnimationItem(title: "Aquarium", view: AnyView(AquariumView())),
+        AnimationItem(title: "Fire", view: AnyView(FireView()))
     ]
 
     var body: some View {

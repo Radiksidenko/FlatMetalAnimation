@@ -57,20 +57,34 @@ struct LavaLampView: View {
 
 struct AquariumView: View {
     @StateObject private var viewModel = AquariumViewModel()
-    let startTime = Date()
-
+    
     var body: some View {
-        TimelineView(.animation) { context in
-            let time = startTime.distance(to: context.date)
-            
-            Rectangle()
-                .fill(.black)
-                .visualEffect { content, geometryProxy in
-                    content.colorEffect(
-                        viewModel.makeShader(size: geometryProxy.size, time: time)
-                    )
-                }
-                .ignoresSafeArea()
+        ShaderContainerView { size, time in
+            viewModel.makeShader(size: size, time: Double(time))
+        }
+    }
+}
+
+struct FireView: View {
+    var body: some View {
+        ShaderContainerView { size, time in
+            ShaderLibrary.vectorFireCircleShader(.float2(size), .float(time))
+        }
+    }
+}
+
+struct NeonWavesView: View {
+    var body: some View {
+        ShaderContainerView { size, time in
+            ShaderLibrary.neonWavesShader(.float2(size), .float(time))
+        }
+    }
+}
+
+struct PlasmaGlobeView: View {
+    var body: some View {
+        ShaderContainerView { size, time in
+            ShaderLibrary.plasmaGlobeShader(.float2(size), .float(time))
         }
     }
 }
