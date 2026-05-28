@@ -11,7 +11,7 @@ import SwiftUI
 struct FlatAnimationApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            CardGridView()
         }
     }
 }
