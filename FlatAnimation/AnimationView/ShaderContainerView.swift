@@ -1,5 +1,5 @@
 //
-//  MetalAnimationView.swift
+//  ShaderContainerView.swift
 //  FlatAnimation
 //
 //  Created by Radomyr Sidenko on 28.05.2026.
@@ -7,23 +7,22 @@
 
 import SwiftUI
 
-struct MetalAnimationView: View {
+struct ShaderContainerView: View {
     let startTime = Date()
+    let shaderProvider: (CGSize, Float) -> Shader
 
     var body: some View {
         TimelineView(.animation) { context in
-            let time = startTime.distance(to: context.date)
+            let time = Float(startTime.distance(to: context.date))
             
             Rectangle()
                 .visualEffect { content, geometryProxy in
                     content
                         .colorEffect(
-                            ShaderLibrary.plasmaShader(
-                                .float2(geometryProxy.size),
-                                .float(time)
-                            )
+                            shaderProvider(geometryProxy.size, time)
                         )
                 }
+                .ignoresSafeArea()
         }
     }
 }
