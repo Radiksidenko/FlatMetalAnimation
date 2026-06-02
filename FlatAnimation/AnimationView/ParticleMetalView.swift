@@ -8,7 +8,7 @@
 import SwiftUI
 import MetalKit
 
-struct ParticleMetalView: View {
+struct BlackHoleView: View {
     var body: some View {
         MetalParticleRenderer()
             .ignoresSafeArea()

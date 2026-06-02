@@ -20,7 +20,7 @@ struct CardGridView: View {
         AnimationItem(title: "LiquidMetalView", view: AnyView(LiquidMetalView())),
         AnimationItem(title: "HexTunnelView", view: AnyView(HexTunnelView())),
         AnimationItem(title: "NeonTunnelView", view: AnyView(NeonTunnelView())),
-        AnimationItem(title: "ParticleMetal", view: AnyView(ParticleMetalView())),
+        AnimationItem(title: "BlackHole", view: AnyView(BlackHoleView())),
         AnimationItem(title: "LiquidLine", view: AnyView(LiquidLineView())),
         AnimationItem(title: "ParticleSphere", view: AnyView(ParticleSphereView())),
         AnimationItem(title: "CubeSwarm", view: AnyView(CubeSwarmView())),
