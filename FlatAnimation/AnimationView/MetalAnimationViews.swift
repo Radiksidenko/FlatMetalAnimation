@@ -88,3 +88,65 @@ struct PlasmaGlobeView: View {
         }
     }
 }
+
+struct HypnoticSphereView: View {
+    var body: some View {
+        ShaderContainerView { size, time in
+            ShaderLibrary.hypnoticSphereShader(.float2(size), .float(time))
+        }
+    }
+}
+
+struct NeonWavesOrbView: View {
+    var body: some View {
+        ShaderContainerView { size, time in
+            ShaderLibrary.neonOrbWithWavesShader(.float2(size), .float(time))
+        }
+    }
+}
+
+struct NeonCubeView: View {
+    var body: some View {
+        ShaderContainerView { size, time in
+            ShaderLibrary.abstractCubeShader(.float2(size), .float(time))
+        }
+        .ignoresSafeArea()
+    }
+}
+
+struct GlassCubeAnimationView: View {
+    var body: some View {
+        ShaderContainerView { size, time in
+            ShaderLibrary.glassLavaLampCubeShader(.float2(size), .float(time))
+        }
+    }
+}
+
+struct CubeSwarmView: View {
+    var body: some View {
+        ShaderContainerView { size, time in
+            ShaderLibrary.metalCubeSwarmShader(
+                .float2(size),
+                .float(time)
+            )
+        }
+    }
+}
+
+struct ParticleSphereView: View {
+    var body: some View {
+        ShaderContainerView { size, time in
+            ShaderLibrary.sphereParticleShader(
+                .float2(size),
+                .float(time)
+            )
+        }
+    }
+}
+struct LiquidLineView: View {
+    var body: some View {
+        ShaderContainerView { size, time in
+            ShaderLibrary.liquidLineShader(.float2(size), .float(time))
+        }
+    }
+}
