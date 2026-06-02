@@ -83,20 +83,26 @@ struct MetalParticleRenderer: UIViewRepresentable {
             let center = SIMD3<Float>(width * 0.5, height * 0.5, 0.0)
             
             for i in 0..<particleCount {
-                let angle = Float.random(in: 0...(Float.pi * 2))
-                let radius = Float.random(in: 100...450)
+                let randVal = Float.random(in: 0...1)
+                let eventHorizon: Float = 50.0
+                let radius = eventHorizon + 10.0 + (pow(randVal, 3.0) * 490.0)
+                
+                let spiralTwist: Float = 5.5
+                var angle = Float.random(in: 0...(Float.pi * 2))
+                let track = Float(Int.random(in: 0...24)) / 24.0
+                angle += (radius * 0.012 * spiralTwist) + track * 0.5
                 
                 let posX = center.x + cos(angle) * radius
                 let posY = center.y + sin(angle) * radius
-                let posZ = Float.random(in: -15...15)
+                let posZ = Float.random(in: -6...6)
                 
+                let orbitalSpeed = 150.0 * (1.0 / sqrt(radius + 1.0))
                 let tangentX = -sin(angle)
                 let tangentY = cos(angle)
-                let speed = Float.random(in: 25...45)
                 
-                let vel = SIMD3<Float>(tangentX * speed, tangentY * speed, 0.0)
+                let vel = SIMD3<Float>(tangentX * orbitalSpeed * 22.0, tangentY * orbitalSpeed * 22.0, 0.0)
                 let col = SIMD4<Float>(0, 0, 0, 0)
-                let life = Float.random(in: 0.0...1.0)
+                let life = Float.random(in: 0.1...1.0)
                 
                 rawParticles.append(Particle(position: SIMD3<Float>(posX, posY, posZ), velocity: vel, color: col, life: life))
             }

@@ -15,14 +15,14 @@ struct AnimationItem: Identifiable {
 
 struct CardGridView: View {
     let items = [
-        AnimationItem(title: "ParticleMetalView", view: AnyView(ParticleMetalView())),
-        AnimationItem(title: "LiquidLineView", view: AnyView(LiquidLineView())),
-        AnimationItem(title: "ParticleSphereView", view: AnyView(ParticleSphereView())),
-        AnimationItem(title: "CubeSwarmView", view: AnyView(CubeSwarmView())),
-        AnimationItem(title: "GlassCubeAnimationView", view: AnyView(GlassCubeAnimationView())),
-        AnimationItem(title: "NeonCubeView", view: AnyView(NeonCubeView())),
-        AnimationItem(title: "NeonWavesOrbView", view: AnyView(NeonWavesOrbView())),
-        AnimationItem(title: "HypnoticSphereView", view: AnyView(HypnoticSphereView())),
+        AnimationItem(title: "ParticleMetal", view: AnyView(ParticleMetalView())),
+        AnimationItem(title: "LiquidLine", view: AnyView(LiquidLineView())),
+        AnimationItem(title: "ParticleSphere", view: AnyView(ParticleSphereView())),
+        AnimationItem(title: "CubeSwarm", view: AnyView(CubeSwarmView())),
+        AnimationItem(title: "GlassCubeAnimation", view: AnyView(GlassCubeAnimationView())),
+        AnimationItem(title: "NeonCube", view: AnyView(NeonCubeView())),
+        AnimationItem(title: "NeonWavesOrb", view: AnyView(NeonWavesOrbView())),
+        AnimationItem(title: "HypnoticSphere", view: AnyView(HypnoticSphereView())),
         AnimationItem(title: "Plasma", view: AnyView(PlasmaView())),
         AnimationItem(title: "Waves", view: AnyView(WaveView())),
         AnimationItem(title: "Particles", view: AnyView(ParticleView())),
