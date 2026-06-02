@@ -1,8 +1,13 @@
 # FlatAnimation
 
 A high-performance iOS gallery of fluid, procedural animations and visual effects powered by **SwiftUI** and **Metal Shading Language (MSL)**.
-  
-https://github.com/user-attachments/assets/8b28b54c-f9b2-4248-8935-778a297dd138  
+
+
+https://github.com/user-attachments/assets/d1a474a6-8076-4606-9f55-2ff81e5f5ca6
+
+
+
+
 
 ## Summary
 
