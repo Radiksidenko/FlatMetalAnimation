@@ -15,6 +15,8 @@ struct AnimationItem: Identifiable {
 
 struct CardGridView: View {
     let items = [
+        AnimationItem(title: "HexTunnelView", view: AnyView(HexTunnelView())),
+        AnimationItem(title: "NeonTunnelView", view: AnyView(NeonTunnelView())),
         AnimationItem(title: "ParticleMetal", view: AnyView(ParticleMetalView())),
         AnimationItem(title: "LiquidLine", view: AnyView(LiquidLineView())),
         AnimationItem(title: "ParticleSphere", view: AnyView(ParticleSphereView())),

@@ -150,3 +150,19 @@ struct LiquidLineView: View {
         }
     }
 }
+
+struct NeonTunnelView: View {
+    var body: some View {
+        ShaderContainerView { size, time in
+            ShaderLibrary.neonTunnelShader(.float2(size), .float(time))
+        }
+    }
+}
+
+struct HexTunnelView: View {
+    var body: some View {
+        ShaderContainerView { size, time in
+            ShaderLibrary.hexTunnelShader(.float2(size), .float(time))
+        }
+    }
+}
