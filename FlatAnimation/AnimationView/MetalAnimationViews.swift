@@ -166,3 +166,11 @@ struct HexTunnelView: View {
         }
     }
 }
+
+struct LiquidMetalView: View {
+    var body: some View {
+        ShaderContainerView { size, time in
+            ShaderLibrary.liquidMetalShader(.float(time), .float2(size))
+        }
+    }
+}
